@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+    form(action='/bbs',method='post')
+      label name:
+      input(id='name',type='text', name='name')
+      label message:
+      textarea(id='msg', name='msg')
+      input(type='submit',value='Sign Up')

@@ -1,0 +1,42 @@
+<!doctype html>
+
+<head>
+  <title>{{title}}</title>
+  
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+
+  {{{block "stylesheets"}}}
+</head>
+
+<body>
+  {{#postmsg}}
+  <p>Your Previous Message: </p> {{{result}}}
+  <br>
+  --------------------------------------------------------
+  {{/postmsg}}
+
+  {{#postimg}}
+  <p>Your Upload Image: </p>
+  <img src="images/{{image}}" height="100" width="200"/>
+  <br>
+  --------------------------------------------------------
+  {{/postimg}}
+
+  <form action='./result' method="post">
+    <p>Please Post Your Message</p>
+    <textarea name="msg" cols="40" rows="5"></textarea>
+    <p></p>
+    <input type="submit" value="Submit" />
+  </form>
+
+  <form action='./result' method="post", enctype="multipart/form-data">
+    <p>Please Upload Your Image  </p>
+    <p><input type="file", name="image" /> </p>
+    <input type="submit" value="Upload" />
+  </form> 
+
+  <br/><br/>
+  {{{block "scripts"}}}
+</body>
+
+</html>

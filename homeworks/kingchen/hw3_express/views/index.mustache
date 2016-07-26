@@ -1,0 +1,22 @@
+<div>
+  <h1>{{title}}</h1><a href="/">Reload Page</a>
+  <div>
+    <ul>
+      {{#each row}}
+      <li>
+        <img width="250" src="/images/{{this.filename}}" />
+        <h3>Message</h3>
+        <p>{{this.msg}}</p>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div>
+    <form method="post" enctype="multipart/form-data">
+      <p>Message: <input type="text" name="message" width="500" size="100"/></p>
+      <p>Image: <input type="file" name="image" accept="image/*" /></p>
+      <p><input type="submit" value="Upload" /></p>
+    </form>
+  </div>
+</div>

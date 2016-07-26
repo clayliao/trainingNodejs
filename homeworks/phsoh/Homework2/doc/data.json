@@ -1,0 +1,336 @@
+{
+    "project": {},
+    "files": {
+        "Logger.js": {
+            "name": "Logger.js",
+            "modules": {
+                "Logger": 1
+            },
+            "classes": {
+                "Logger": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Renderer.js": {
+            "name": "Renderer.js",
+            "modules": {
+                "Renderer": 1
+            },
+            "classes": {
+                "Renderer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "requestHandlers.js": {
+            "name": "requestHandlers.js",
+            "modules": {
+                "requestHandlers": 1
+            },
+            "classes": {
+                "requestHandlers": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "router.js": {
+            "name": "router.js",
+            "modules": {
+                "route": 1
+            },
+            "classes": {
+                "route": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "server.js": {
+            "name": "server.js",
+            "modules": {
+                "server": 1
+            },
+            "classes": {
+                "server": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "Logger": {
+            "name": "Logger",
+            "submodules": {},
+            "classes": {
+                "Logger": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "Logger.js",
+            "line": 1,
+            "description": "A simple but handful logger ."
+        },
+        "Renderer": {
+            "name": "Renderer",
+            "submodules": {},
+            "classes": {
+                "Renderer": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "Renderer.js",
+            "line": 6,
+            "description": "Simple renderer using `mustache`."
+        },
+        "requestHandlers": {
+            "name": "requestHandlers",
+            "submodules": {},
+            "classes": {
+                "requestHandlers": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "requestHandlers.js",
+            "line": 13,
+            "description": "Request Handles.\nAvailable handles:\n  start: normal result pages\n  notFound: error 404 page\n  icon: favicon"
+        },
+        "route": {
+            "name": "route",
+            "submodules": {},
+            "classes": {
+                "route": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "router.js",
+            "line": 4,
+            "description": "Router to dispatch different handles based on pathname."
+        },
+        "server": {
+            "name": "server",
+            "submodules": {},
+            "classes": {
+                "server": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "server.js",
+            "line": 6,
+            "description": "Router to dispatch different handles based on pathname."
+        }
+    },
+    "classes": {
+        "Logger": {
+            "name": "Logger",
+            "shortname": "Logger",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Logger",
+            "namespace": "",
+            "file": "Logger.js",
+            "line": 1,
+            "description": "A simple but handful logger ."
+        },
+        "Renderer": {
+            "name": "Renderer",
+            "shortname": "Renderer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Renderer",
+            "namespace": "",
+            "file": "Renderer.js",
+            "line": 6,
+            "description": "Simple renderer using `mustache`."
+        },
+        "requestHandlers": {
+            "name": "requestHandlers",
+            "shortname": "requestHandlers",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "requestHandlers",
+            "namespace": "",
+            "file": "requestHandlers.js",
+            "line": 13,
+            "description": "Request Handles.\nAvailable handles:\n  start: normal result pages\n  notFound: error 404 page\n  icon: favicon"
+        },
+        "route": {
+            "name": "route",
+            "shortname": "route",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "route",
+            "namespace": "",
+            "file": "router.js",
+            "line": 4,
+            "description": "Router to dispatch different handles based on pathname."
+        },
+        "server": {
+            "name": "server",
+            "shortname": "server",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "server",
+            "namespace": "",
+            "file": "server.js",
+            "line": 6,
+            "description": "Router to dispatch different handles based on pathname."
+        }
+    },
+    "classitems": [
+        {
+            "file": "Logger.js",
+            "line": 17,
+            "description": "Get warning level. Avaiable warning level are",
+            "itemtype": "method",
+            "name": "level",
+            "class": "Logger",
+            "module": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 25,
+            "description": "Set warning level. Return false if the level is not support.",
+            "itemtype": "method",
+            "name": "setLevel",
+            "params": [
+                {
+                    "name": "level",
+                    "description": "The warning level to set.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "False if the level is not support.",
+                "type": "Boolean"
+            },
+            "class": "Logger",
+            "module": "Logger"
+        },
+        {
+            "file": "Logger.js",
+            "line": 40,
+            "description": "Print message with warning level.",
+            "itemtype": "method",
+            "name": "log",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "Message to print.",
+                    "type": "String"
+                },
+                {
+                    "name": "level",
+                    "description": "Warning level.",
+                    "type": "String"
+                },
+                {
+                    "name": "namespace",
+                    "description": "Namespace that print the message..",
+                    "type": "String"
+                }
+            ],
+            "class": "Logger",
+            "module": "Logger"
+        },
+        {
+            "file": "Renderer.js",
+            "line": 15,
+            "description": "Return a render function with predefined template.",
+            "itemtype": "method",
+            "name": "render",
+            "static": 1,
+            "params": [
+                {
+                    "name": "template",
+                    "description": "Path for Mustache template.",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "Data to be inserted into the template.",
+                    "type": "Object"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function.",
+                    "type": "Function"
+                }
+            ],
+            "class": "Renderer",
+            "module": "Renderer"
+        },
+        {
+            "file": "Renderer.js",
+            "line": 42,
+            "description": "Write data to HTTP response object with status code and data.",
+            "itemtype": "method",
+            "name": "output",
+            "static": 1,
+            "params": [
+                {
+                    "name": "response",
+                    "description": "HTTP response object",
+                    "type": "Object"
+                },
+                {
+                    "name": "status",
+                    "description": "HTTP status.",
+                    "type": "Number"
+                },
+                {
+                    "name": "contenttype",
+                    "description": "HTTP content-type",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "HTTP body.",
+                    "type": "String"
+                }
+            ],
+            "class": "Renderer",
+            "module": "Renderer"
+        },
+        {
+            "file": "server.js",
+            "line": 12,
+            "description": "Start a server",
+            "itemtype": "method",
+            "name": "start",
+            "params": [
+                {
+                    "name": "handle",
+                    "description": "Routing module",
+                    "type": "Object"
+                },
+                {
+                    "name": "handle",
+                    "description": "Pahtname to handle matching pairs.",
+                    "type": "Object"
+                }
+            ],
+            "class": "server",
+            "module": "server"
+        }
+    ]
+}

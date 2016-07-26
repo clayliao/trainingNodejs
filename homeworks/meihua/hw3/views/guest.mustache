@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Guestbook</title>
+    </head>
+    <body>
+        <h1>Welcome to the Guestbook!</h1>
+        <form method="post" enctype="multipart/form-data">
+            Your Name: <input type="text" name='name'><br>
+            Upload Your Image: <input type="file" name="image" /><br>
+            Message: <br><textarea rows="5" cols="50" name='msg'></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <div>
+            <h3>Hello {{name}}!</h3>
+            <p>{{msg}}</p>
+            <img src='images/{{image}}' alt='' />
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:response xmlns:tk="http://www.trueknowledge.com/ns/kengine" xmlns="http://www.w3.org/1999/xhtml" understood="true" answered="true" type="direct_answer">
+<tk:status>completeness unknown</tk:status>
+<tk:warning>API request not logged: Query failed (after reconnecting and retrying): MySQL server has gone away(2006)</tk:warning>
+<tk:text_result>trial (a period of testing something, such as a drug trial)</tk:text_result>
+<tk:structured_result type="answer"><tk:result><tk:object><tk:id>[trial]</tk:id>
+</tk:object>
+</tk:result>
+</tk:structured_result>
+<tk:num_results>1</tk:num_results>
+<tk:num_translations>1</tk:num_translations>
+<tk:tk_question_url>http://www.trueknowledge.com/q/test</tk:tk_question_url>
+<tk:snv>test</tk:snv>
+</tk:response>

@@ -1,0 +1,10 @@
+"use strict";
+
+var site = {
+	'host': '',
+	'user': '',
+	'password': '!',
+	'database': ''
+};
+
+exports.conf = site;

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	WebFontConfig = {
+		google: { families: [ 'Abel' ] }
+	};
+	(function() {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	})();
+</script>
+<style type="text/css">
+a {
+	text-decoration: none;
+	color: #eee;
+}
+
+a:hover {
+	color: #000;
+}
+
+input[type=text] {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px #ccc dashed;
+	color: #fff;
+	text-align: center;
+	font-size: 150%;
+	width: 80%;
+}
+
+input[type=text]:hover {
+	color: #333;
+}
+
+input[type=submit] {
+	background-color: #ccc;
+	color: #fff;
+	border: 0px;
+}
+
+#box {
+	font-family: 'Abel', sans-serif;
+	width: 200px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #eee;
+	color: #ccc;
+	border-radius: 20px;
+}
+
+#box h1 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	background-color: #ccc;
+	color: #fff;
+}
+
+#box #bt_goBack {
+	position: relative;
+	margin-top: -20px;
+	margin-left: -30px;
+	width: 20px;
+	background-color: #000;
+	font-size: 200%;
+}
+
+#box #text {
+	margin-top: -25px;
+	padding: 5px;
+}
+
+#result {
+	background-color: #ccc;
+	width: 80%;
+	margin: 10px auto;
+	padding: 20px;
+	border-radius: 30px;
+}
+
+#result img {
+	height: 75px;
+    width: 75px;
+}
+
+</style>
+</head>
+<body>
+<div id="box">
+<h1>Flickr search</h1>
+<div id="bt_goBack"><a href="javascript:history.back();">&lt;</a></div>
+<div id="text">
+	enter your search
+	<div id="searchbox">
+		<form method="GET">
+			<input type="text" value="{{q}}" name="q"/>
+			<input type="submit" value="Search now!" />
+		</form>
+	</div>
+{{#error}}<h2>{{error}}</h2>{{/error}}
+	<h3>RESULTS</h3>
+</div>
+</div>
+<div id="result">
+	<div id="overlay">
+{{#result}}
+	<a href="http://farm{{farm}}.static.flickr.com/{{server}}/{{id}}_{{secret}}.jpg" class="imglink" target="_blank">
+		<img src="http://farm{{farm}}.static.flickr.com/{{server}}/{{id}}_{{secret}}_s.jpg" />
+	</a>
+{{/result}}
+	</div>
+	<script type="text/javascript">
+	/*
+		var arr = document.getElementsByTagName("a");
+		
+		for( var i = 0; i<arr.length ; i++ ) {
+			//alert(arr[i].innerHTML);
+			if( arr[i].className === "imglink" ) {
+
+				arr[i].onclick = function (e) {
+					//alert(e.currentTarget.href);
+
+					if(!e) var e = window.event;
+					//e.cancelBubble is supported by IE - this will kill the bubbling process.
+					e.cancelBubble = true;
+					e.returnValue = false;
+
+					//e.stopPropagation works only in Firefox.
+					if (e.stopPropagation) {
+						e.stopPropagation();
+						e.preventDefault();
+					}
+				};
+			} 
+		}
+	*/
+	</script>
+</div>
+<div id="popbox"></div>
+</body>
+</html>

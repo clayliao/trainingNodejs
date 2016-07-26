@@ -1,0 +1,45 @@
+<h1>Cyko's Guestbook</h1>
+<p>Welcome to {{title}}</p>
+
+<script>
+function myPost() {
+	msg=document.getElementById('msg');
+	old_msg=document.getElementById('old_msg');
+	history=document.getElementById('history');
+	postData="msg="+msg.value+"&old_msg="+old_msg.value;
+	//alert(msg);
+	//alert(old_msg);
+
+	req=new XMLHttpRequest();
+	req.open('POST', '/api', true);
+	req.setRequestHeader(  
+			'Content-Type',  
+			'application/x-www-form-urlencoded'  
+			);
+	req.onreadystatechange=function() {
+		if (req.readyState == 4) {  
+			if (req.status == 200) {  
+				total_msg = req.responseText;  
+				msg.value='';
+				old_msg.value=total_msg;
+				document.getElementById('history').innerHTML=total_msg;
+			}else{  
+				alert(req.statusText);  
+			}  
+		}
+	}	
+
+    req.send(postData);
+
+	return false;
+}
+</script>
+
+<form method="post">
+  Say something: <input name="msg" id="msg">
+  <input type="hidden" name="old_msg" id="old_msg" value="">
+  <input type="submit" onclick="return myPost();">
+</form>
+
+<div id="history">
+</div>

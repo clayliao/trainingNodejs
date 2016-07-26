@@ -1,0 +1,11 @@
+﻿<a href="/guestbook">Upload more pics</a>
+<table width="100%" border="1" cellspacing="0" cellpadding="3">
+  <tr><th>Message</th><th>Description</th><th>Image</th></tr>
+  {{#data}}
+  <tr>
+    <td>{{text}}</td>
+    <td>{{description}}</td>
+    <td><img src="/image/{{file}}"></td>
+  </tr >
+  {{/data}}
+</table>

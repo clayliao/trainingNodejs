@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>{{title}}</title>
+<script type="text/javascript">
+	WebFontConfig = {
+		google: { families: [ 'Abel' ] }
+	};
+	(function() {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	})();
+</script>
+<style type="text/css">
+body {
+	font-family: 'Abel', sans-serif
+}
+
+a {
+	text-decoration: none;
+	color: #eee;
+}
+
+a:hover {
+	color: #000;
+}
+
+input[type=text] {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px #ccc dashed;
+	color: #fff;
+	text-align: center;
+	font-size: 150%;
+	width: 80%;
+}
+
+input[type=text]:hover {
+	color: #ccc;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: transparent;
+	color: #fff;
+	border: 0px;
+	font-size: 1em;
+}
+
+input[type=submit]:hover {
+	color: #ccc;
+}
+
+input[type=file] {
+	width: 100%;
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#container > div {
+	float: left;
+}
+
+#container > #guestbook {
+	width: 80%;
+	height: 100%;
+	background-color: #ccc;
+	overflow: auto;
+	min-height: 400px;
+}
+
+#guestbook > div {
+	margin: 10px 50px 10px 50px;
+}
+
+#container > #userinput {
+	width: 20%;
+	height: 100%;
+	background-color: #333;
+	color: #eee;
+}
+
+
+#userinput > div > h1 {
+	padding: 10px;
+	border-left: #fff 5px solid;
+}
+
+#userinput > div > form {
+	padding: 10px;
+}
+
+#msg {
+	padding-left: 5px;
+	border-left: 3px #333 solid;
+}
+
+</style>
+<script src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+</head>
+<body>
+<div id="container">
+	<div id="guestbook">
+		<div id="msg">Welcome! This is room `{{room}}`. {{#fresh}}It's empty. Leave some messages now!{{/fresh}}{{#error}}<br/>{{error}}{{/error}}</div>
+		<div>
+			{{{data}}}
+		</div>
+	</div>
+	<div id="userinput">
+		<div>
+			<h1>{{title}}</h1>
+			<form method="POST" enctype="multipart/form-data" action="/msg/add">
+				Room: <br/><input type="text" name="room" value="{{room}}" /><br/>
+				Person: <br/><input type="text" name="person" value="{{person}}"/><br/>
+				Message: <br/><input type="text" name="msg" /><br/>
+				Image: <br/><input type="file" name="image" /><br/>
+				<br/>
+				<input type="submit" value="Submit Now" />
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

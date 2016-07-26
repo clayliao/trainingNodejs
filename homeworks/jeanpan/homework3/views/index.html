@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="row-fluid">
+
+        <div class="span3">
+          
+          	<div class="sidebar-nav">
+        	<h1>Jean's Guestbook</h1>
+
+			<form action="/send" method="post" class="form-horizontal">
+			<div class="control-group">
+    		<input type="input" name="name" placeholder=" Your name…"/>
+			</div>
+   			<div class="control-group">
+    		<textarea rows="3" name="msg" placeholder="Say something…" /></textarea>
+			</div>
+   			<div class="control-group">
+   			<button type="submit" class="btn btn-info">Submit</button>
+   			</div>
+			</form>  	
+
+         	</div><!--/.well -->
+        
+        </div><!--/span3-->
+
+        <div class="span9">
+
+        	<div class="well">
+			{{data}}
+			</div>	
+
+        </div><!--/span9-->
+
+    </div><!--/row-->
+<!--
+    <hr>
+    <footer>
+    <p>&copy; Jean 2012</p>
+    </footer>
+-->
+
+</div><!--/.fluid-container-->
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿{ 
+    'items': [ 'England', 'Germany', 'France' ],
+
+        'count' : function () {
+            return function (text, render) {
+                // note that counter is in the enclosing scope
+                return counter++;
+            }
+        },
+    'message': 'hello'
+}

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+
+  br
+  br
+
+  span(style='color:red') #{err}
+
+  br
+  br
+
+  h3 make an order
+
+  form(method='get', target='./')
+    label Name
+        input(name='user', value='')
+    br
+    label Desire
+        textarea(name='msg') Blended Ice Coffee, No Sugar Added, Mocha
+    br
+    input(type='submit')
+
+  br
+  br
+
+  h3 delivered drinks
+
+  div#comments
+    each item, i in users
+        li= item + ' - ' + msgs[i]
